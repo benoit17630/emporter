@@ -1,0 +1,96 @@
+{
+    "array": [{
+            "name": "Base tomate",
+            "pizzas": [{
+                    "name": "Marguerite",
+                    "price": 8.50,
+                    "taille": 0
+                },
+                {
+                    "name": "Reine",
+                    "price": 9.50,
+                    "taille": 0
+                },
+                {
+                    "name": "Complete",
+                    "price": 11,
+                    "taille": 0
+                },
+                {
+                    "name": "Tonio",
+                    "price": 11.50,
+                    "taille": 0
+                },
+                {
+                    "name": "Provencale",
+                    "price": 12,
+                    "taille": 0
+                },
+                {
+                    "name": "Burger",
+                    "price": 12.50,
+                    "taille": 0
+                },
+                {
+                    "name": "Vegetarienne",
+                    "price": 13,
+                    "taille": 0
+                },
+                {
+                    "name": "Moussaka",
+                    "price": 13,
+                    "taille": 0
+                },
+                {
+                    "name": "Saumon",
+                    "price": 14,
+                    "taille": 0
+                }, {
+                    "name": "Calzone",
+                    "price": 14,
+                    "taille": 0
+                }
+            ]
+        },
+        {
+            "name": "Base Creme",
+            "pizzas": [{
+                    "name": "Flammekueche",
+                    "price": 11,
+                    "taille": 0
+                },
+                {
+                    "name": "4 Fromage",
+                    "price": 12.50,
+                    "taille": 0
+                },
+                {
+                    "name": "Tartif",
+                    "price": 12.50,
+                    "taille": 0
+                },
+                {
+                    "name": "Paysanne",
+                    "price": 12.50,
+                    "taille": 0
+                }, {
+                    "name": "La Ruche",
+                    "price": 13,
+                    "taille": 0
+                }, {
+                    "name": "Indienne",
+                    "price": 13.50,
+                    "taille": 0
+                }, {
+                    "name": "Nordique",
+                    "price": 13.50,
+                    "taille": 0
+                }, {
+                    "name": "Oceane",
+                    "price": 14.50,
+                    "taille": 0
+                }
+            ]
+        }
+    ]
+}

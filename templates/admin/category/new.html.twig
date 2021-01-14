@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}nouvelle categorie d ingredient {% endblock %}
+
+{% block body %}
+    <div class="container stencil">
+    <h1 class="mt-4">nouvelle categorie d ingredient</h1>
+
+    {{ include('admin/category/_form.html.twig') }}
+
+    <a href="{{ path('admin_category_index') }}" class="mt-4">retour a la liste</a>
+    </div>
+{% endblock %}

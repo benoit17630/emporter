@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}OpeningDay index{% endblock %}
+
+{% block body %}
+    <div class="container stencil">
+        <h1 class="text-center my-4">liste des jours</h1>
+        <a href="{{ path('admin_opening_day_new') }}" class="btn btn-primary">ajouter</a>
+        <table class="table">
+            <thead>
+            <tr>
+
+                <th>nom</th>
+                <th>afficher</th>
+                <th>actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for opening_day in opening_days %}
+                <tr>
+
+                    <td>{{ opening_day.name }}</td>
+                    <td>{{ opening_day.isActive ? 'oui' : 'non' }}</td>
+                    <td>
+
+                        <a href="{{ path('admin_opening_day_edit', {'id': opening_day.id}) }}" class="btn btn-secondary">modifier</a>
+                        <form method="post" action="{{ path('admin_opening_day_delete', {'id': opening_day.id}) }}"
+                              onsubmit="return confirm('ete vous sure de vouloir suprimer  {{ opening_day.name }}?');" style="display: inline-block">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ opening_day.id) }}" >
+                            <button class="btn btn-danger">Suprimer</button>
+                        </form>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="4">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

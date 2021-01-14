@@ -1,0 +1,55 @@
+<div class="container text-center">
+    {{ form_start(form) }}
+
+
+    <div class="row police justify-content-center align-items-end mt-4">
+        <div class="col-12 col-md-3">
+            {{ form_label(form.name) }}
+            {{ form_widget(form.name) }}
+            {{ form_errors(form.name) }}
+        </div>
+        <div class="col-12 col-md-3 mt-4">
+            {{ form_label(form.comment) }}
+            {{ form_widget(form.comment) }}
+        </div>
+
+        <div class="col-12 col-md-3 mt-4">
+            {{ form_label(form.price) }}
+            {{ form_widget(form.price) }}
+            {{ form_errors(form.price) }}
+        </div>
+
+    </div>
+    <div class="row  justify-content-center mt-4">
+        <div class="col-10 col-md-4   mt-4">
+            {{ form_label(form.basePizza) }}
+            {{ form_widget(form.basePizza) }}
+        </div>
+    </div>
+    <div class="row  justify-content-center mt-4">
+        <div class="col-12 col-md-4   mt-4">
+            {{ form_label(form.ingredients) }}
+            {{ form_widget(form.ingredients) }}
+        </div>
+    </div>
+
+    <div class="row  justify-content-center">
+        <div class="col-12   mt-4">
+            {{ form_label(form.isActive) }}
+            {{ form_widget(form.isActive) }}
+        </div>
+    </div>
+    <div class="row  justify-content-center mt-4">
+        <div class="col-12 col-md-4   mt-4">
+            {{ form_label(form.image) }}
+            {{ form_widget(form.image) }}
+        </div>
+    </div>
+
+    <button class="btn btn-primary my-4 text-center">{{ button_label|default('sauvegarder') }}</button>
+    {{ form_rest(form) }}
+
+</div>
+{{ form_end(form) }}
+
+

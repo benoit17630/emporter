@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New OpeningTime{% endblock %}
+
+{% block body %}
+    <div class="container stencil">
+    <h1 class="text-center mt-4">nouveaux horraire</h1>
+
+    {{ include('admin/opening_time/_form.html.twig') }}
+
+    <a href="{{ path('admin_opening_time_index') }}">retour a la liste</a>
+    </div>
+{% endblock %}

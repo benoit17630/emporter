@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+{% block title %} Votre recherche {% endblock %}
+
+{% block body %}
+    <div class="container-fluid stencil">
+
+        <article class="row justify-content-center text-center align-items-center">
+
+            <ul class="col-12 row text-left mt-4 list-none">
+                {% for ingredient in ingredients %}
+                    {% for pizza in ingredient.pizzas %}
+
+                            <li class="col-lg-6 col-12 mt-3 ">
+
+                                <ul class="row text-left  mt-4 list-none">
+                                    <li class="col-6 police ">{{ pizza.name }} {% if  pizza.comment   %}
+                                            <span class="arial">({{ pizza.comment }})</span>
+                                        {% endif %}</li>
+                                    <li class="col-3 col-md-2 offset-1 offset-md-4 police">{{ pizza.price|number_format(2) }}€</li>
+                                    <li class="col-12 arial">
+                                        {% for ingredients in pizza.ingredients %}
+                                            {% if ingredients.isFirst == true %}
+                                                {{ ingredients.name }},
+                                            {% endif %}
+                                        {% endfor %}
+                                        {% for ingredients in pizza.ingredients %}
+                                            {% if  ingredients.isFirst == false and ingredients.isLast != true %}
+                                                {{ ingredients.name }},
+                                            {% endif %}
+                                        {% endfor %}
+                                        {% for ingredients in pizza.ingredients %}
+                                            {% if ingredients.isLast  == true %}
+                                                {{ ingredients.name }}
+                                            {% endif %}
+                                        {% endfor %}
+                                    </li>
+                                </ul>
+                            </li>
+
+                    {% endfor %}
+                {% endfor %}
+            </ul>
+        </article>
+
+    </div>
+{% endblock %}
+
+
+

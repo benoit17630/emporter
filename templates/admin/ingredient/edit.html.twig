@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Ingredient{% endblock %}
+
+{% block body %}
+    <div class="container stencil">
+    <h1 class="text-center mt-4">modifier Ingredient</h1>
+
+    {{ include('admin/ingredient/_form.html.twig', {'button_label': 'modifier'}) }}
+
+    <a href="{{ path('admin_ingredient_index') }}" >retour a la liste</a>
+
+    </div>
+{% endblock %}

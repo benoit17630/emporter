@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}liste des horaires {% endblock %}
+
+{% block body %}
+    <div class="container stencil">
+
+    <h1 class="text-center mt-4">liste des horaires</h1>
+        <a href="{{ path('admin_opening_time_new') }}" class="btn btn-primary">ajouter</a>
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th>nom</th>
+                <th>afficher</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for opening_time in opening_times %}
+            <tr>
+
+                <td>{{ opening_time.name }}</td>
+                <td>{{ opening_time.isActive ? 'oui' : 'non' }}</td>
+                <td>
+
+                    <a href="{{ path('admin_opening_time_edit', {'id': opening_time.id}) }}" class="btn btn-secondary">modifier</a>
+                    <form method="post" action="{{ path('admin_opening_time_delete', {'id': opening_time.id}) }}"
+                          onsubmit="return confirm('ete vous sure de vouloir suprimer  {{ opening_time.name }}?');" style="display: inline-block">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ opening_time.id) }}" >
+                        <button class="btn btn-danger">Suprimer</button>
+                    </form>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+    </div>
+{% endblock %}

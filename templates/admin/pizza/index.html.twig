@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pizza index{% endblock %}
+
+{% block body %}
+    <div class="container stencil">
+    <h1 class="text-center mt-4">liste des Pizzas</h1>
+        <a href="{{ path('admin_pizza_new') }}" class="btn btn-primary">ajouter</a>
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th>nom</th>
+                <th class="d-none d-md-table-cell ">Base</th>
+                <th class="d-none d-md-table-cell">Prix</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for pizza in pizzas %}
+            <tr>
+
+                <td>{{ pizza.name }}</td>
+                <td class="d-none d-md-table-cell">{{ pizza.basepizza.name }}</td>
+                <td class="d-none d-md-table-cell">{{ pizza.price|number_format(2) }}</td>
+
+                <td>
+
+                    <a href="{{ path('admin_pizza_edit', {'id': pizza.id}) }}" class="btn btn-secondary">modifier</a>
+                    <form method="post" action="{{ path('admin_pizza_delete', {'id': pizza.id}) }}"
+                          onsubmit="return confirm('ete vous sure de vouloir suprimer  {{ pizza.name }}?');" style="display: inline-block">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ pizza.id) }}" >
+                        <button class="btn btn-danger">Suprimer</button>
+                    </form>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+    </div>
+{% endblock %}
