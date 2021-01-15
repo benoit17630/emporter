@@ -101,13 +101,14 @@ class PizzaController extends AbstractController
         }
 
 
-        /**
-         * @Route("/{id}/edit", name="admin_pizza_edit", methods={"GET","POST"})
-         * @param Request $request
-         * @param Pizza $pizza
-         * @param CategoryRepository $categoryRepository
-         * @return Response
-         */
+    /**
+     * @Route("/{id}/edit", name="admin_pizza_edit", methods={"GET","POST"})
+     * @param Request $request
+     * @param Pizza $pizza
+     * @param CategoryRepository $categoryRepository
+     * @param SluggerInterface $slugger
+     * @return Response
+     */
         public function edit(Request $request,
                              Pizza $pizza,
                              CategoryRepository $categoryRepository,
