@@ -69,12 +69,13 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle police" href="#" id="navbarDropdownMenuLink"
                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                ouverture/fermeture
+                                info
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
                                 <a class="dropdown-item " href="{{ path('admin_opening_time_index') }}">les horaires</a>
                                 <a class="dropdown-item " href="{{ path('admin_opening_day_index') }}">les jours</a>
+                                <a class="dropdown-item" href="{{ path('admin_adress_index') }}">adresse <span class="sr-only">(current)</span></a>
                             </div>
                         </li>
 
@@ -86,7 +87,7 @@
                             <a class="nav-link police" href="{{ path('admin_base_pizza_index') }}">les bases</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link police" href="{{ path('admin_adress_index') }}">Admin <span class="sr-only">(current)</span></a>
+                            <a class="nav-link police" href="{{ path('admin_home') }}">Admin <span class="sr-only">(current)</span></a>
                         </li>
 
                     </ul>
@@ -94,10 +95,10 @@
             </nav>
         {% endif %}
 
-        <form class="form-inline md-form mr-auto mt-2 pb-2">
-            <input class="form-control mr-sm-2 col-5 col-lg-5 ml-1" type="text" name="search" placeholder="Rechercher"
+        <form class="form-inline md-form mr-auto col-12 mt-2 pb-2">
+            <input class="form-control mr-sm-2 col-5 col-lg-3 ml-1" type="text" name="search" placeholder="Rechercher"
                    aria-label="Search">
-            <button class="   marronclair  col-6 col-lg-6 ml-1" type="submit"> Rechercher</button>
+            <button class="   marronclair  col-6 col-lg-3 ml-1" type="submit"> Rechercher</button>
         </form>
 
 

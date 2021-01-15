@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73ce0efb-6fce-4e23-8e27-47d0faa6f914" name="Default Changelist" comment="transfer">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="73ce0efb-6fce-4e23-8e27-47d0faa6f914" name="Default Changelist" comment="trie pizza par base et prix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/pizza/c276de885f748688c4d33efef1735ffb-png-wh860_5fe9ee9ca0047.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/pizza/c276de885f748688c4d33efef1735ffb-png-wh860_5fe9ef9930509.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/pizza/c276de885f748688c4d33efef1735ffb-png-wh860_5fe9f1ad8da9c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/pizza/c276de885f748688c4d33efef1735ffb-png-wh860_5fe9f2c3b9f85.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/pizza/c276de885f748688c4d33efef1735ffb-png-wh860_5fe9f31e35ad8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/pizza/c276de885f748688c4d33efef1735ffb-png-wh860_5fe9f396a4486.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/pizza/c276de885f748688c4d33efef1735ffb-png-wh860_5fe9fa4a488b7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/pizza/c276de885f748688c4d33efef1735ffb-png-wh860_5fe9faf9d8009.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/pizza/c276de885f748688c4d33efef1735ffb-png-wh860_5fe9fbe8d80cf.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/pizza/c276de885f748688c4d33efef1735ffb-png-wh860_5fea0166b1009.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/pizza/c276de885f748688c4d33efef1735ffb-png-wh860_5fea01a1be90f.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/pizza/marguerite_5fe32637672fe.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminHomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminHomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ApiController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ResetPasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/User/OrderController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/adress/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/adress/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/reset_password/check_email.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reset_password/check_email.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/reset_password/request.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reset_password/request.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,10 +152,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ToolWindowDuplicates.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -198,7 +195,8 @@
       <workItem from="1610026471925" duration="2645000" />
       <workItem from="1610033362023" duration="22000" />
       <workItem from="1610634599042" duration="302000" />
-      <workItem from="1610702687452" duration="4583000" />
+      <workItem from="1610702687452" duration="14288000" />
+      <workItem from="1610730852284" duration="646000" />
     </task>
     <task id="LOCAL-00001" summary="transfer">
       <created>1610634748548</created>
@@ -207,7 +205,21 @@
       <option name="project" value="LOCAL" />
       <updated>1610634748549</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="trie pizza par base et prix">
+      <created>1610708386455</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610708386455</updated>
+    </task>
+    <task id="LOCAL-00003" summary="trie pizza par base et prix">
+      <created>1610708497743</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610708497743</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +239,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="transfer" />
-    <option name="LAST_COMMIT_MESSAGE" value="transfer" />
+    <MESSAGE value="trie pizza par base et prix" />
+    <option name="LAST_COMMIT_MESSAGE" value="trie pizza par base et prix" />
   </component>
 </project>
