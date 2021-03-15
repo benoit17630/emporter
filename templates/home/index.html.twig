@@ -53,12 +53,14 @@
                                     </ul>
                                 </li>
                             </ul>
+
                         </article>
+                        <div id="basetomate" class="mb-5"></div>
                     </section>
                 {%  endif %}
             {% endif %}
         {% endfor %}
-        <div class="intersection mb-5" id="basetomate"></div>
+        <div class="intersection mb-5" ></div>
 
         <section>
             <h2 class="text-center">Nos Pizzas Base Tomate</h2>
@@ -106,10 +108,12 @@
                 <div class="col-lg-2 d-none d-lg-block">
                     <img src="{{ asset('assets/img/pizza1.jpg') }}" alt="" class="img-fluid">
                 </div>
+                <div class="mb-5" id="basecreme"></div>
             </article>
-            <div class="intersection mb-5" id="basecreme"></div>
+
         </section>
-        <section class="basecreme stencil">
+        <div class="intersection mb-5 " ></div>
+        <section class="basecreme stencil mt-5">
             <h2 class="creme ">Nos Pizzas Base Crème Fraiche</h2>
 
             <article class="row justify-content-around text-center align-items-center ">
@@ -210,11 +214,11 @@
                     <li class="col-lg-3 order-1 mb-3">Adresse
                         <ul class="row list-none">
                             {% for adress in adresss %}
-                                
 
-                            <li class="col-12 arial">{{adress.adress|nl2br}}</li>
-                            <li class="col-12">Téléphone</li>
-                            <li class="col-12 arial">{{ adress.phoneNumber|nl2br }}</li>
+
+                                <li class="col-12 arial">{{adress.adress|nl2br}}</li>
+                                <li class="col-12">Téléphone</li>
+                                <li class="col-12 arial">{{ adress.phoneNumber|nl2br }}</li>
 
                             {% endfor %}
                         </ul>

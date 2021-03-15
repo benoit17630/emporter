@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73ce0efb-6fce-4e23-8e27-47d0faa6f914" name="Default Changelist" comment="trie pizza par base et prix">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_01_2021_11_07__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminHomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminHomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ApiController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ResetPasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/User/OrderController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/adress/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/adress/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/reset_password/check_email.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reset_password/check_email.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/reset_password/request.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reset_password/request.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
-    </list>
-    <list default="true" id="73ce0efb-6fce-4e23-8e27-47d0faa6f914" name="Default Changelist" comment="transfer">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,6 +195,11 @@
       <workItem from="1610634599042" duration="302000" />
       <workItem from="1610702687452" duration="14288000" />
       <workItem from="1610730852284" duration="646000" />
+      <workItem from="1614006370203" duration="619000" />
+      <workItem from="1614008052287" duration="1070000" />
+      <workItem from="1614011208280" duration="185000" />
+      <workItem from="1614782410651" duration="79000" />
+      <workItem from="1615817800600" duration="1956000" />
     </task>
     <task id="LOCAL-00001" summary="transfer">
       <created>1610634748548</created>
@@ -212,12 +208,12 @@
       <option name="project" value="LOCAL" />
       <updated>1610634748549</updated>
     </task>
-    <task id="LOCAL-00002" summary="trie pizza par base et prix">
-      <created>1610708386455</created>
+    <task id="LOCAL-00002" summary="transfer">
+      <created>1610634944917</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1610708386455</updated>
+      <updated>1610634944917</updated>
     </task>
     <task id="LOCAL-00003" summary="trie pizza par base et prix">
       <created>1610708497743</created>
@@ -225,14 +221,6 @@
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
       <updated>1610708497743</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
-    <task id="LOCAL-00002" summary="transfer">
-      <created>1610634944917</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1610634944917</updated>
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
@@ -250,6 +238,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="transfer" />
