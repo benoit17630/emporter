@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73ce0efb-6fce-4e23-8e27-47d0faa6f914" name="Default Changelist" comment="trie pizza par base et prix">
+    <list default="true" id="73ce0efb-6fce-4e23-8e27-47d0faa6f914" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_01_2021_11_07__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,18 +147,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ToolWindowDuplicates.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MAMP\htdocs\symfony\emporter\templates" />
       <recent name="C:\MAMP\htdocs\emporter" />
       <recent name="C:\MAMP\htdocs\emporter\public\assets\js" />
       <recent name="C:\MAMP\htdocs\emporter\public\assets\img" />
       <recent name="C:\MAMP\htdocs\emporter\public\assets" />
-      <recent name="C:\MAMP\htdocs\emporter" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\MAMP\htdocs\emporter\public\assets\img" />
@@ -199,7 +198,23 @@
       <workItem from="1614008052287" duration="1070000" />
       <workItem from="1614011208280" duration="185000" />
       <workItem from="1614782410651" duration="79000" />
-      <workItem from="1615817800600" duration="1956000" />
+      <workItem from="1615817800600" duration="2227000" />
+      <workItem from="1615897556947" duration="1069000" />
+      <workItem from="1615899570728" duration="1350000" />
+      <workItem from="1615901557671" duration="83000" />
+      <workItem from="1615971649841" duration="677000" />
+      <workItem from="1615974285459" duration="159000" />
+      <workItem from="1615976935386" duration="8000" />
+      <workItem from="1616165708919" duration="530000" />
+      <workItem from="1616490738924" duration="190000" />
+      <workItem from="1616491123785" duration="112000" />
+      <workItem from="1616491661676" duration="525000" />
+      <workItem from="1616590888555" duration="89000" />
+      <workItem from="1616749469817" duration="37000" />
+      <workItem from="1616757201535" duration="88000" />
+      <workItem from="1616762048686" duration="11000" />
+      <workItem from="1616767803922" duration="1383000" />
+      <workItem from="1617090945433" duration="4932000" />
     </task>
     <task id="LOCAL-00001" summary="transfer">
       <created>1610634748548</created>
@@ -215,14 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610634944917</updated>
     </task>
-    <task id="LOCAL-00003" summary="trie pizza par base et prix">
-      <created>1610708497743</created>
+    <task id="LOCAL-00003" summary="ajustement">
+      <created>1615819798570</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1610708497743</updated>
+      <updated>1615819798570</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +257,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="transfer" />
-    <option name="LAST_COMMIT_MESSAGE" value="transfer" />
+    <MESSAGE value="ajustement" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajustement" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
