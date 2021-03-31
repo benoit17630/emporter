@@ -32,20 +32,20 @@
                                         <li class="col-6">{{ pizza.name }} {% if  pizza.comment   %}
                                                 <span class="arial">({{ pizza.comment }})</span>
                                             {% endif %} </li>
-                                        <li class="col-3 col-md-2 offset-3 offset-md-4">{{ pizza.price|number_format(2) }}€</li>
+                                        <li class="col-4 col-md-2 offset-2 offset-md-4">{{ pizza.price|number_format(2) }} €</li>
                                         <li class="col-12 arial">
                                             {% for ingredients in pizza.ingredients %}
-                                                {% if ingredients.isFirst == true %}
+                                                {% if ingredients.category.name == "debut" %}
                                                     {{ ingredients.name }},
                                                 {% endif %}
                                             {% endfor %}
                                             {% for ingredients in pizza.ingredients %}
-                                                {% if  ingredients.isFirst == false and ingredients.isLast != true %}
+                                                {% if  ingredients.category.name != "debut" and ingredients.category.name != "fin" %}
                                                     {{ ingredients.name }},
                                                 {% endif %}
                                             {% endfor %}
                                             {% for ingredients in pizza.ingredients %}
-                                                {% if ingredients.isLast  == true %}
+                                                {% if ingredients.category.name  == "fin" %}
                                                     {{ ingredients.name }}
                                                 {% endif %}
                                             {% endfor %}
@@ -78,21 +78,21 @@
                                         <li class="col-6">{{ pizza.name }} {% if  pizza.comment   %}
                                                 <span class="arial">({{ pizza.comment }})</span>
                                             {% endif %} </li>
-                                        <li class="col-3 col-md-2 offset-3 offset-md-4">{{ pizza.price|number_format(2) }}€</li>
+                                        <li class="col-4 col-md-4 offset-2 offset-md-2">{{ pizza.price|number_format(2) }} €</li>
                                         <li class="col-12 arial">
 
                                             {% for ingredients in pizza.ingredients %}
-                                                {% if ingredients.isFirst == true %}
+                                                {% if ingredients.category.name == "debut" %}
                                                     {{ ingredients.name }},
                                                 {% endif %}
                                             {% endfor %}
                                             {% for ingredients in pizza.ingredients %}
-                                                {% if  ingredients.isFirst == false and ingredients.isLast != true %}
+                                                {% if  ingredients.category.name != "debut" and ingredients.category.name != "fin" %}
                                                     {{ ingredients.name }},
                                                 {% endif %}
                                             {% endfor %}
                                             {% for ingredients in pizza.ingredients %}
-                                                {% if ingredients.isLast  == true %}
+                                                {% if ingredients.category.name  == "fin" %}
                                                     {{ ingredients.name }}
                                                 {% endif %}
                                             {% endfor %}
@@ -130,20 +130,20 @@
                                         <li class="col-6">{{ pizza.name }} {% if  pizza.comment   %}
                                                 <span class="arial">({{ pizza.comment }})</span>
                                             {% endif %} </li>
-                                        <li class="col-3 col-md-2 offset-3 offset-md-4">{{ pizza.price|number_format(2) }}€</li>
+                                        <li class="col-4 col-md-4 offset-2 offset-md-2">{{ pizza.price|number_format(2) }} €</li>
                                         <li class="col-12 arial">
                                             {% for ingredients in pizza.ingredients %}
-                                                {% if ingredients.isFirst == true %}
+                                                {% if ingredients.category.name == "debut" %}
                                                     {{ ingredients.name }},
                                                 {% endif %}
                                             {% endfor %}
                                             {% for ingredients in pizza.ingredients %}
-                                                {% if  ingredients.isFirst == false and ingredients.isLast != true %}
+                                                {% if  ingredients.category.name != "debut" and ingredients.category.name != "fin" %}
                                                     {{ ingredients.name }},
                                                 {% endif %}
                                             {% endfor %}
                                             {% for ingredients in pizza.ingredients %}
-                                                {% if ingredients.isLast  == true %}
+                                                {% if ingredients.category.name  == "fin" %}
                                                     {{ ingredients.name }}
                                                 {% endif %}
                                             {% endfor %}
@@ -177,20 +177,20 @@
                                         <li class="col-6">{{ pizza.name }} {% if  pizza.comment   %}
                                                 <span class="arial">({{ pizza.comment }})</span>
                                             {% endif %} </li>
-                                        <li class="col-3 col-md-2 offset-3 offset-md-4">{{ pizza.price|number_format(2) }}€</li>
+                                        <li class="col-4 col-md-4 offset-2 offset-md-2">{{ pizza.price|number_format(2) }} €</li>
                                         <li class="col-12 arial">
                                             {% for ingredients in pizza.ingredients %}
-                                                {% if ingredients.isFirst == true %}
+                                                {% if ingredients.category.name == "debut" %}
                                                     {{ ingredients.name }},
                                                 {% endif %}
                                             {% endfor %}
                                             {% for ingredients in pizza.ingredients %}
-                                                {% if  ingredients.isFirst == false and ingredients.isLast != true %}
+                                                {% if  ingredients.category.name != "debut" and ingredients.category.name != "fin" %}
                                                     {{ ingredients.name }},
                                                 {% endif %}
                                             {% endfor %}
                                             {% for ingredients in pizza.ingredients %}
-                                                {% if ingredients.isLast  == true %}
+                                                {% if ingredients.category.name  == "fin" %}
                                                     {{ ingredients.name }}
                                                 {% endif %}
                                             {% endfor %}

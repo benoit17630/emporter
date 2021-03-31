@@ -1,0 +1,74 @@
+{%  extends 'base.html.twig' %}
+
+{% block title %}Mon panier
+{% endblock %}
+
+{% block body %}
+    <div class="stencil">
+    <h1 class="mt-5">Mon panier</h1>
+    <a href="{{ path('remove_my_cart') }}" class="btn btn-danger mt-3">Vider mon panier</a>
+    <p class="mt-3">
+        Retrouver l'ensemble des pizza que vous avez ajouté à votre panier <br>
+        {% if pizzas|length > 0 %}<a href="{{ path('commande') }}">Continuer mes achats</a>{% endif %}
+    </p>
+
+
+    {% if pizzas|length > 0 %}
+
+        <table class="table mt-3">
+            <thead>
+            <tr>
+                <th scope="col" colspan="2">Produit</th>
+                <th scope="col">Quantité</th>
+                <th scope="col">Prix</th>
+                <th scope="col" colspan="2">Total</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% set total = 0 %}
+            {% set nbProducts = 0 %}
+            {% for pizza in pizzas %}
+                <tr>
+                    <td>
+                        <img src="{{asset('upload/pizza/') ~ pizza.pizza.image }}" alt="{{pizza.pizza.name}}" height="75">
+                    </td>
+                    <td>
+                        {{pizza.pizza.name}}<br>
+
+                    </td>
+                    <td class="no-style-hover">
+
+                        <a href="{{ path('decrease_to_cart',{id:pizza.pizza.id}) }}" >
+                            <img src="{{ asset('assets/img/minus.png') }}" alt="supprimer un produit" height="20">
+                        </a>
+                        &nbsp;{{pizza.quantity}}&nbsp;
+                        <a href="{{ path('add_to_cart',{id:pizza.pizza.id}) }}" >
+                            <img src="{{ asset('assets/img/plus.png') }}" alt="ajouter un produit" height="20">
+                        </a>
+                    </td>
+                    <td>{{(pizza.pizza.price)| number_format(2, ',', '.')}} &euro;</td>
+                    <td>{{((pizza.pizza.price * pizza.quantity)) | number_format(2, ',', '.')}}	&euro;</td>
+                    <td>
+                        <a href="{{ path('delete_to_cart',{id:pizza.pizza.id}) }}">
+                            <img src="{{ asset('assets/img/trash-can.png') }}" alt="supprimer mon produit" height="20">
+                        </a>
+                    </td>
+                </tr>
+                {% set total = total + ((pizza.pizza.price * pizza.quantity)) %}
+                {% set nbProducts = nbProducts + pizza.quantity %}
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="text-right mb-5">
+            <b>Nombre de pizzas : {{nbProducts}}</b>
+            <br>
+            <b>Total de mon panier : {{ total | number_format(2, ',', '.')}} &euro;</b>
+            <br>
+            <a href="" class="btn btn-success mt-3">Valider mon panier</a>
+        </div>
+    {% else %}
+        <hr>
+        <p>Votre panier est vide.</p>
+    {% endif %}
+    </div>
+{% endblock %}

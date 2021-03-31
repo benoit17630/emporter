@@ -2,9 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73ce0efb-6fce-4e23-8e27-47d0faa6f914" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210330143449.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210330144832.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210331073439.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210331095822.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/information.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/minus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/password.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/shopping.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/trash-can.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Cart/Cart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/AcountController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Commande/CartController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Commande/CommandeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Admin/Order.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Admin/OrderDetail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/ChangePasswordType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/UserInformationChangeType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/Admin/OrderDetailRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/Admin/OrderRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/acount/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/acount/information.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/acount/password.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/commande/cart/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/commande/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/emporter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/emporter.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Admin/Ingredient.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Admin/Ingredient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +171,7 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfonycasts/verify-email-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfonycasts/reset-password-bundle" />
+      <path value="$PROJECT_DIR$/vendor/twig/intl-extra" />
     </include_path>
   </component>
   <component name="ProjectId" id="1lh8Cib8HcKrmG87Dp0V0yHj6j0" />
@@ -147,20 +185,21 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ToolWindowDuplicates.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/img" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MAMP\htdocs\symfony\emporter\public\assets\img" />
       <recent name="C:\MAMP\htdocs\symfony\emporter\templates" />
       <recent name="C:\MAMP\htdocs\emporter" />
       <recent name="C:\MAMP\htdocs\emporter\public\assets\js" />
       <recent name="C:\MAMP\htdocs\emporter\public\assets\img" />
-      <recent name="C:\MAMP\htdocs\emporter\public\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\MAMP\htdocs\symfony\emporter\templates\commande" />
       <recent name="C:\MAMP\htdocs\emporter\public\assets\img" />
     </key>
   </component>
@@ -214,7 +253,7 @@
       <workItem from="1616757201535" duration="88000" />
       <workItem from="1616762048686" duration="11000" />
       <workItem from="1616767803922" duration="1383000" />
-      <workItem from="1617090945433" duration="4932000" />
+      <workItem from="1617090945433" duration="33395000" />
     </task>
     <task id="LOCAL-00001" summary="transfer">
       <created>1610634748548</created>
@@ -237,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615819798570</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ajout de la gestion des page d erreurs">
+      <created>1617097544332</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1617097544332</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +304,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="transfer" />
     <MESSAGE value="ajustement" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajustement" />
+    <MESSAGE value="ajout de la gestion des page d erreurs" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout de la gestion des page d erreurs" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

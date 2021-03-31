@@ -12,7 +12,7 @@
     <title>{% block title %} {% endblock %} A l'Emporter - Pizzeria à Sainte Marie de Ré</title>
 </head>
 <body class="container">
-<header class="stencil container-fluid">
+<header class="stencil ">
     <div class="row align-items-center">
         <div class="d-none d-lg-block col-lg-6 offset-3 my-3"><img src="{{ asset('assets/img/logo.jpg') }}" alt="" class="img-fluid "></div>
     <nav class="navbar navbar-expand-lg navbar-light  ">
@@ -34,10 +34,12 @@
                     <a class="nav-link text-white  " href="{{ path('home') }}#contacts">où nous trouver ?</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-black  " href="#">commander</a>
+                    <a class="nav-link text-black  " href="{{ path('commande') }}">commander</a>
                 </li>
                 {% if app.user  %}
-
+                    <li class="nav-item">
+                        <a href="{{ path('acount') }}" class="nav-link">Mon compte</a>
+                    </li>
                     <li class="nav-item">
                         <a href="{{ path('app_logout') }}" class="nav-link">Se deconnecter</a>
                     </li>
@@ -105,6 +107,7 @@
     </div>
 </header>
 <main>
+
     {% for message in app.flashes('success') %}
         <div class="row justify-content-center mt-5">
             <p id="flash" onclick="myFunction()" class="btn btn-success text-center">{{ message }}</p>

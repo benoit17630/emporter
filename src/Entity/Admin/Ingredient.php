@@ -30,15 +30,6 @@ class Ingredient
      */
     private $name;
 
-    /**
-     * @ORM\Column(type="boolean", nullable=true)
-     */
-    private $isFirst;
-
-    /**
-     * @ORM\Column(type="boolean", nullable=true)
-     */
-    private $isLast;
 
     /**
      * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="ingredients")
@@ -72,29 +63,7 @@ class Ingredient
         return $this;
     }
 
-    public function getIsFirst(): ?bool
-    {
-        return $this->isFirst;
-    }
 
-    public function setIsFirst(?bool $isFirst): self
-    {
-        $this->isFirst = $isFirst;
-
-        return $this;
-    }
-
-    public function getIsLast(): ?bool
-    {
-        return $this->isLast;
-    }
-
-    public function setIsLast(?bool $isLast): self
-    {
-        $this->isLast = $isLast;
-
-        return $this;
-    }
 
     public function getCategory(): ?Category
     {

@@ -7,18 +7,36 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Constraints\Regex;
 
 class RegistrationFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('email', EmailType::class,["label"=>"votre email :"])
+            ->add('email', EmailType::class,[
+                "label"=>"votre email :"])
+
+            ->add('firstname',TextType::class,[
+                "label"=> "Votre prénom",
+            ])
+
+            ->add('lastname',TextType::class,[
+                "label"=> "Votre nom",
+            ])
+
+            ->add('phonenumber',TextType::class,[
+                "label"=>'Votre numero de telephone',
+                "constraints"=>[
+                    new Regex("/^((\+)33|0)[1-9](\d{2}){4}$/")
+                ]
+            ])
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
                 "label"=>"acepter les termes :",
