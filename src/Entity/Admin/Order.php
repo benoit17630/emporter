@@ -4,6 +4,7 @@ namespace App\Entity\Admin;
 
 use App\Entity\User;
 use App\Repository\Admin\OrderRepository;
+use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -14,6 +15,12 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Order
 {
+    const STATE= [
+        0=>'non payer',
+        1=>'payer',
+        2=>'prete'
+    ];
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -49,6 +56,7 @@ class Order
 
     public function __construct()
     {
+        $this->createdAt = new DateTime();
         $this->orderDetails = new ArrayCollection();
     }
 

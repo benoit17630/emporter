@@ -19,17 +19,17 @@
                                     <li class="col-3 col-md-2 offset-1 offset-md-4 police">{{ pizza.price|number_format(2) }}€</li>
                                     <li class="col-12 arial">
                                         {% for ingredients in pizza.ingredients %}
-                                            {% if ingredients.isFirst == true %}
+                                            {% if ingredients.category.name == "debut" %}
                                                 {{ ingredients.name }},
                                             {% endif %}
                                         {% endfor %}
                                         {% for ingredients in pizza.ingredients %}
-                                            {% if  ingredients.isFirst == false and ingredients.isLast != true %}
+                                            {% if  ingredients.category.name != "debut" and ingredients.category.name != "fin" %}
                                                 {{ ingredients.name }},
                                             {% endif %}
                                         {% endfor %}
                                         {% for ingredients in pizza.ingredients %}
-                                            {% if ingredients.isLast  == true %}
+                                            {% if ingredients.category.name  == "fin" %}
                                                 {{ ingredients.name }}
                                             {% endif %}
                                         {% endfor %}

@@ -19,22 +19,22 @@ class OrderRepository extends ServiceEntityRepository
         parent::__construct($registry, Order::class);
     }
 
-    // /**
-    //  * @return Order[] Returns an array of Order objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    /**
+     * @return Order[] Returns an array of Order objects
+      */
+
+    public function findLastId(): array
     {
         return $this->createQueryBuilder('o')
-            ->andWhere('o.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('o.id', 'ASC')
-            ->setMaxResults(10)
+            ->select("o.id")
+            ->orderBy('o.id', 'DESC')
+            ->setMaxResults(1)
             ->getQuery()
             ->getResult()
+
         ;
     }
-    */
+
 
     /*
     public function findOneBySomeField($value): ?Order
@@ -47,4 +47,5 @@ class OrderRepository extends ServiceEntityRepository
         ;
     }
     */
+
 }

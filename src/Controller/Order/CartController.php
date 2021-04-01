@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\Commande;
+namespace App\Controller\Order;
 
 use App\Cart\Cart;
 use App\Repository\Admin\PizzaRepository;
@@ -58,4 +58,6 @@ class CartController extends AbstractController
         $cart->remove();
         return $this->redirectToRoute('commande');
     }
+
+
 }

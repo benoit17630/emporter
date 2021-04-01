@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+ {% block title %}Paiement de ma commande  }} {% endblock %}
+
+{% block body %}
+    <h2 class="mt-5 stencil text-center">Mon récapitulatif de ma commande</h2>
+    <p class="stencil">Vérifier les information de votre commande avant de payer </p>
+    <h4 class="stencil text-center">Ma commande</h4>
+
+    {% set totalPizzas = 0 %}
+    {% for key, pizza in cart %}
+        <div class="row {% if key > 0 %}mt-2{% endif %} align-items-center">
+            <div class="col-3">
+                <img src="{{ asset('upload/pizza/' ~ pizza.pizza.image) }}" alt="{{pizza.pizza.name}}" height="100">
+            </div>
+            <div class="col-5  ">
+                {{pizza.pizza.name}} x {{pizza.quantity}}
+            </div>
+            <div class="col-3 ">
+                <p>{{(pizza.pizza.price * pizza.quantity)| number_format(2)}} &euro;</p>
+            </div>
+        </div>
+        {% set totalPizzas = totalPizzas + ((pizza.pizza.price * pizza.quantity)) %}
+    {% endfor %}
+    <strong>Sous-total :</strong>
+    {{ totalPizzas | number_format(2)}} &euro;<br>
+    <hr>
+    {% set total = (totalPizzas) | number_format(2)  %}
+    <strong>Total : </strong>{{ total}} &euro;
+
+    <a href="{{ path('order_recap') }}" class="btn btn-success btn-block mt-3" id="checkout-button">Payer | {{ total }}  &euro;</a>
+{% endblock %}
+
+
+
+
+
