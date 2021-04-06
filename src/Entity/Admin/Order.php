@@ -15,11 +15,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Order
 {
-    const STATE= [
-        0=>'non payer',
-        1=>'payer',
-        2=>'prete'
-    ];
+
 
     /**
      * @ORM\Id
@@ -53,6 +49,11 @@ class Order
      * @ORM\OneToMany(targetEntity=OrderDetail::class, mappedBy="myOrder")
      */
     private $orderDetails;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $stripSessionId;
 
     public function __construct()
     {
@@ -139,6 +140,18 @@ class Order
                 $orderDetail->setMyOrder(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getStripSessionId(): ?string
+    {
+        return $this->stripSessionId;
+    }
+
+    public function setStripSessionId(?string $stripSessionId): self
+    {
+        $this->stripSessionId = $stripSessionId;
 
         return $this;
     }

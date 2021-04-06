@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Order{% endblock %}
+
+{% block body %}
+    <div class="stencil">
+        <h1 class="text-center mt-5">Commande numero: {{ order.orderNumber }}</h1>
+
+        <div class="card border-primary my-3" >
+            <div class="card-header text-center">{{ order.user.lastname }} {{ order.user.firstname }}</div>
+            <div class="card-body text-primary">
+                {% for detail in order.orderDetails %}
+                    <h5 class="card-title my-3 text-center" >
+                        {{ detail.pizza}} {{ detail.price|number_format(2)}} € x {{ detail.quantity }} = {{ detail.total|number_format(2) }} € <br>
+                    </h5>
+                {% endfor %}
+                <div class="row">
+                    <p> etat de la commande : </p> {% if  order.state  == 0 %}
+                        <div class="text-danger">   Non payé </div>
+                    {% elseif order.state == 1 %}
+                        <div class="text-success"> Payer</div>
+                    {% elseif order.state == 2 %}
+                        <div class="text-info"> En preparation</div>
+                    {% elseif order.state == 3 %}
+                        <div class="text-blue"> Prete</div>
+                    {% else %}
+                        <div class="text-dark">Terminer</div>
+                    {% endif %}
+                </div>
+                <div class="row justify-content-around">
+                    <p class="card-text-left ">numero de telephone :{{ order.user.phonenumber }} </p>
+                    <p class="card-text text-right "> Adresse mail : {{ order.user.email }}</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="{{ path('admin_order_index') }}" class="btn btn-primary">Retour a la liste</a>
+
+        <a href="{{ path('admin_order_edit', {'id': order.id}) }}" class="btn btn-info">Modifier</a>
+
+
+    </div>
+{% endblock %}

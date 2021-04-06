@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des commandes{% endblock %}
+
+{% block body %}
+    <div class="stencil">
+        <h1 class="text-center mt-5">Liste des commandes</h1>
+        <a href="{{ path('commande') }}">Nouvelle commande</a>
+        <table class="table  table-striped table-hover mt-3">
+            <thead class="">
+            <tr>
+                <th>Nom</th>
+                <th>Date</th>
+                <th>Detail de la commande</th>
+                <th> Total de la commande </th>
+                <th>Statue</th>
+                <th>actions</th>
+            </tr>
+            </thead>
+            <tbody class="">
+            {% for order in orders %}
+                <tr>
+
+                    <td>{{ order.user.firstname }} {{ order.user.lastname }}</td>
+
+
+                    <td>{{ order.createdAt ? order.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>
+                        {% for detail in order.orderDetails %}
+                            {{ detail.pizza}} {{ detail.price|number_format(2)}} € x {{ detail.quantity }} <br>
+                        {% endfor %}
+                    </td>
+                    <td>
+                        {% set totalPizzas = 0 %}
+                        {% for detail in order.orderDetails %}
+
+                            {% set totalPizzas = totalPizzas + ((detail.total)) %}
+
+                        {% endfor %}
+                        {{ totalPizzas | number_format(2)}} €
+                    </td>
+                    <td> <div class="row">
+                            <p> etat de la commande  : </p> {% if  order.state  == 0 %}
+                                <div class="text-danger">    Non payé </div>
+                            {% elseif order.state == 1 %}
+                                <div class="text-success"> Payer</div>
+                            {% elseif order.state == 2 %}
+                                <div class="text-info"> En preparation</div>
+                            {% elseif order.state == 3 %}
+                                <div class="text-blue"> Prete</div>
+                            {% else %}
+                                <div class="text-dark"> Terminer</div>
+                            {% endif %}
+                        </div>
+
+                    </td>
+                    <td>
+                        <a href="{{ path('admin_order_show', {'id': order.id}) }}">voir</a>
+                        <a href="{{ path('admin_order_edit', {'id': order.id}) }}">modifier</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="5">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+
+    </div>
+{% endblock %}

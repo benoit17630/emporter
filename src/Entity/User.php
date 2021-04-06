@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 
+use App\Entity\Admin\Order;
 use App\Repository\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -162,14 +163,14 @@ class User implements UserInterface
     }
 
     /**
-     * @return Collection|\App\Entity\Admin\Order[]
+     * @return Collection|Order[]
      */
     public function getOrders(): Collection
     {
         return $this->orders;
     }
 
-    public function addOrder(\App\Entity\Admin\Order $order): self
+    public function addOrder(Order $order): self
     {
         if (!$this->orders->contains($order)) {
             $this->orders[] = $order;
@@ -179,7 +180,7 @@ class User implements UserInterface
         return $this;
     }
 
-    public function removeOrder(\App\Entity\Admin\Order $order): self
+    public function removeOrder(Order $order): self
     {
         if ($this->orders->removeElement($order)) {
             // set the owning side to null (unless already changed)

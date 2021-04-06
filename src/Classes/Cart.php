@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Cart;
+namespace App\Classes;
 
 
 use App\Repository\Admin\PizzaRepository;

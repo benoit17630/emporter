@@ -4,6 +4,8 @@ namespace App\Controller\Account;
 
 use App\Form\ChangePasswordType;
 use App\Form\UserInformationChangeType;
+use App\Repository\Admin\OrderRepository;
+use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -79,9 +81,14 @@ class AcountController extends AbstractController
     /**
      * @Route("/compte/mes-commandes", name="account_order")
      */
-    public function orderListe()
+    public function orderListe(OrderRepository $orderRepository)
     {
-        dd("ok");
-        //TODO a faire
+        $user= $this->getUser();
+        $orders = $orderRepository->findBy(["user"=>$user],["id"=>"DESC"],5);
+
+
+        return $this->render("acount/order_list.html.twig",[
+            "orders"=>$orders
+        ]);
     }
 }

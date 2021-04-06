@@ -2,17 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73ce0efb-6fce-4e23-8e27-47d0faa6f914" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Form/OrderType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/commande/add.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/OrderController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/StripeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/Admin/OrderType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/acount/order_list.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/order/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/order/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/order/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/order/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/commande/order/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/commande/order_cancel/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/commande/order_success/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/emporter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/emporter.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AcountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Account/AcountController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Commande/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Order/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Commande/CommandeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Order/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cart/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Account/AcountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Account/AcountController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Order/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Order/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Order/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Order/OrderController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Admin/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Admin/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/Admin/OrderRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/Admin/OrderRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/commande/add.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/commande/add.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/commande/cart/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/commande/cart/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/commande/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/commande/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/search.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/search.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +158,7 @@
       <path value="$PROJECT_DIR$/vendor/symfonycasts/verify-email-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfonycasts/reset-password-bundle" />
       <path value="$PROJECT_DIR$/vendor/twig/intl-extra" />
+      <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
     </include_path>
   </component>
   <component name="ProjectId" id="1lh8Cib8HcKrmG87Dp0V0yHj6j0" />
@@ -156,18 +172,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ToolWindowDuplicates.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/commande" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MAMP\htdocs\symfony\emporter\templates\commande" />
       <recent name="C:\MAMP\htdocs\symfony\emporter" />
       <recent name="C:\MAMP\htdocs\symfony\emporter\public\assets\img" />
       <recent name="C:\MAMP\htdocs\symfony\emporter\templates" />
       <recent name="C:\MAMP\htdocs\emporter" />
-      <recent name="C:\MAMP\htdocs\emporter\public\assets\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\MAMP\htdocs\symfony\emporter\src\Controller\Account" />
@@ -226,7 +242,8 @@
       <workItem from="1616757201535" duration="88000" />
       <workItem from="1616762048686" duration="11000" />
       <workItem from="1616767803922" duration="1383000" />
-      <workItem from="1617090945433" duration="51403000" />
+      <workItem from="1617090945433" duration="87840000" />
+      <workItem from="1617693428143" duration="4200000" />
     </task>
     <task id="LOCAL-00001" summary="transfer">
       <created>1610634748548</created>
@@ -270,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617185999407</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="enregistrement de la commande en bdd">
+      <created>1617265004785</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1617265004785</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +317,8 @@
     <MESSAGE value="ajustement" />
     <MESSAGE value="ajout de la gestion des page d erreurs" />
     <MESSAGE value="un ptit commit car sa fait longtemps" />
-    <option name="LAST_COMMIT_MESSAGE" value="un ptit commit car sa fait longtemps" />
+    <MESSAGE value="enregistrement de la commande en bdd" />
+    <option name="LAST_COMMIT_MESSAGE" value="enregistrement de la commande en bdd" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

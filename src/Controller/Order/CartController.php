@@ -2,7 +2,7 @@
 
 namespace App\Controller\Order;
 
-use App\Cart\Cart;
+use App\Classes\Cart;
 use App\Repository\Admin\PizzaRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;

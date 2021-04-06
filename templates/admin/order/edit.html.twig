@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modification du statue de la commande{% endblock %}
+
+{% block body %}
+    <div class="stencil">
+        <h1 class="text-center mt-5">Modification du statue de la commande</h1>
+
+        {{ include('admin/order/_form.html.twig', {'button_label': 'Modifier'}) }}
+
+        <a href="{{ path('admin_order_index') }}" class="btn btn-primary mb-3">Retour a la liste</a>
+
+    </div>
+{% endblock %}

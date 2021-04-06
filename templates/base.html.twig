@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     {% block style %} {% endblock %}
+    {% block javascript %}{% endblock %}
     <title>{% block title %} {% endblock %} A l'Emporter - Pizzeria à Sainte Marie de Ré</title>
 </head>
 <body class="container">
@@ -89,7 +90,7 @@
                             <a class="nav-link police" href="{{ path('admin_base_pizza_index') }}">les bases</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link police" href="{{ path('admin_home') }}">Admin <span class="sr-only">(current)</span></a>
+                            <a class="nav-link police" href="{{ path('admin_order_index') }}">Admin <span class="sr-only">(current)</span></a>
                         </li>
 
                     </ul>
@@ -131,7 +132,8 @@
         document.getElementById("flash").style.display = "none";
     }
       $('select').select2();
-    {% block javascripts %}{% endblock %}
+   
 </script>
+{% block script %}{% endblock %}
 </body>
 </html>
