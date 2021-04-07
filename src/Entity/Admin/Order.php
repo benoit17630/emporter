@@ -55,6 +55,11 @@ class Order
      */
     private $stripSessionId;
 
+    /**
+     * @ORM\Column(type="time")
+     */
+    private $wantedAt;
+
     public function __construct()
     {
         $this->createdAt = new DateTime();
@@ -152,6 +157,18 @@ class Order
     public function setStripSessionId(?string $stripSessionId): self
     {
         $this->stripSessionId = $stripSessionId;
+
+        return $this;
+    }
+
+    public function getWantedAt(): ?\DateTimeInterface
+    {
+        return $this->wantedAt;
+    }
+
+    public function setWantedAt(\DateTimeInterface $wantedAt): self
+    {
+        $this->wantedAt = $wantedAt;
 
         return $this;
     }

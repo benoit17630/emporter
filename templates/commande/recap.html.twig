@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="stencil">
+        <h2 class="mt-5 stencil text-center">Mon récapitulatif de ma commande</h2>
+
+        {{ form_start(form) }}
+        {{ form_row(form.wantedAt) }}
+        <h4 class="stencil text-center">Ma commande</h4>
+
+        {% set totalPizzas = 0 %}
+        {% for key, pizza in cart %}
+            <div class="row {% if key > 0 %}mt-2{% endif %} align-items-center">
+                <div class="col-3">
+                    <img src="{{ asset('upload/pizza/' ~ pizza.pizza.image) }}" alt="{{pizza.pizza.name}}" height="100">
+                </div>
+                <div class="col-5  ">
+                    {{pizza.pizza.name}} {{ pizza.pizza.price| number_format(2)}} € x {{pizza.quantity}}
+                </div>
+                <div class="col-3 ">
+                    <p>{{(pizza.pizza.price * pizza.quantity)| number_format(2)}} &euro;</p>
+                </div>
+            </div>
+            {% set totalPizzas = totalPizzas + ((pizza.pizza.price * pizza.quantity)) %}
+        {% endfor %}
+        <hr>
+        {% set total = (totalPizzas) | number_format(2)  %}
+        <strong>Total : </strong>{{ total}} &euro;
+
+{{ form_end(form) }}
+    </div>
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+

@@ -2,13 +2,16 @@
 {% block title %} Votre recherche {% endblock %}
 
 {% block body %}
-    <div class="container-fluid stencil">
+    {% if ingredients %}
 
-        <article class="row justify-content-center text-center align-items-center">
 
-            <ul class="col-12 row text-left mt-4 list-none">
-                {% for ingredient in ingredients %}
-                    {% for pizza in ingredient.pizzas %}
+        <div class="container stencil">
+
+            <article class="row justify-content-center text-center align-items-center">
+
+                <ul class="col-12 row text-left mt-4 list-none">
+                    {% for ingredient in ingredients %}
+                        {% for pizza in ingredient.pizzas %}
 
                             <li class="col-lg-6 col-12 mt-3 ">
 
@@ -37,12 +40,18 @@
                                 </ul>
                             </li>
 
+                        {% endfor %}
                     {% endfor %}
-                {% endfor %}
-            </ul>
-        </article>
+                </ul>
+            </article>
 
-    </div>
+        </div>
+    {% else %}
+        <div class="container stencil mt-5 text-center">
+            <h3>Il n y a pas de pizza avec l ingredient de votre recherche</h3>
+        </div>
+    {% endif %}
+
 {% endblock %}
 
 

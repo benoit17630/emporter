@@ -16,39 +16,39 @@
 <header class="stencil ">
     <div class="row align-items-center">
         <div class="d-none d-lg-block col-lg-6 offset-3 my-3"><img src="{{ asset('assets/img/logo.jpg') }}" alt="" class="img-fluid "></div>
-    <nav class="navbar navbar-expand-lg navbar-light  ">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse col-12" id="navbarTogglerDemo01">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item ">
-                    <a class="nav-link text-white   " href="{{path('home')}}">ACCUEIL </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white  " href="{{ path('home') }}#basetomate">Base Tomate</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white  " href="{{ path('home') }}#basecreme">Base Créme</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white  " href="{{ path('home') }}#contacts">où nous trouver ?</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-black  " href="{{ path('commande') }}">commander</a>
-                </li>
-                {% if app.user  %}
-                    <li class="nav-item">
-                        <a href="{{ path('acount') }}" class="nav-link">Mon compte</a>
+        <nav class="navbar navbar-expand-lg navbar-light  ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse col-12" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item ">
+                        <a class="nav-link text-white   " href="{{path('home')}}">ACCUEIL </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ path('app_logout') }}" class="nav-link">Se deconnecter</a>
+                        <a class="nav-link text-white  " href="{{ path('home') }}#basetomate">Base Tomate</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white  " href="{{ path('home') }}#basecreme">Base Créme</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white  " href="{{ path('home') }}#contacts">où nous trouver ?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black  " href="{{ path('commande') }}">commander</a>
+                    </li>
+                    {% if app.user  %}
+                        <li class="nav-item">
+                            <a href="{{ path('acount') }}" class="nav-link">Mon compte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ path('app_logout') }}" class="nav-link">Se deconnecter</a>
+                        </li>
 
-                {% endif %}
-            </ul>
-        </div>
-    </nav>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
         {% if is_granted('ROLE_ADMIN')  %}
             <nav class="navbar navbar-expand-lg navbar-light ">
 
@@ -78,7 +78,7 @@
 
                                 <a class="dropdown-item " href="{{ path('admin_opening_time_index') }}">les horaires</a>
                                 <a class="dropdown-item " href="{{ path('admin_opening_day_index') }}">les jours</a>
-                                <a class="dropdown-item" href="{{ path('admin_adress_index') }}">adresse <span class="sr-only">(current)</span></a>
+                                <a class="dropdown-item" href="{{ path('admin_adress_index') }}">adresse </a>
                             </div>
                         </li>
 
@@ -89,8 +89,15 @@
                         <li class="nav-item">
                             <a class="nav-link police" href="{{ path('admin_base_pizza_index') }}">les bases</a>
                         </li>
-                        <li class="nav-item active">
-                            <a class="nav-link police" href="{{ path('admin_order_index') }}">Admin <span class="sr-only">(current)</span></a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle police" href="#" id="navbarDropdownMenuLink"
+                               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                admin
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="nav-link police" href="{{ path('admin_order_index') }}">Liste des commandes</a>
+                                <a class="nav-link police" href="{{ path('admin_user') }}">Liste des utilisateurs</a>
+                            </div>
                         </li>
 
                     </ul>
@@ -118,8 +125,8 @@
 </main>
 <footer class="mt-4">
 
-        <p>Copyright A l'Emporter - <a href="">Mentions Légales</a> - Conception & Design : <a
-                    href="https://benoitmenier.fr">Benoit Menier</a></p>
+    <p>Copyright A l'Emporter - <a href="">Mentions Légales</a> - Conception & Design : <a
+                href="https://benoitmenier.fr">Benoit Menier</a></p>
 
 </footer>
 
@@ -131,8 +138,8 @@
     function myFunction() {
         document.getElementById("flash").style.display = "none";
     }
-      $('select').select2();
-   
+    $('select').select2();
+
 </script>
 {% block script %}{% endblock %}
 </body>

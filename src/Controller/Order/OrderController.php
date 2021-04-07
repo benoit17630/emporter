@@ -5,12 +5,14 @@ namespace App\Controller\Order;
 use App\Classes\Cart;
 use App\Entity\Admin\Order;
 use App\Entity\Admin\OrderDetail;
+use App\Form\OrderType;
 use App\Repository\Admin\OrderRepository;
 use App\Repository\Admin\PizzaRepository;
 use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -71,38 +73,55 @@ class OrderController extends AbstractController
      */
     public function orderAdd(Cart $cart,
                              PizzaRepository $pizzaRepository,
-                             EntityManagerInterface $manager)
+                             EntityManagerInterface $manager,Request $request)
     {
-
         $user = $this->getUser();
-        $userId = $user->getId();
-        $requet = $this->orderRepository->findLastId();
-        $orderId = $requet[0]["id"] + 1;
 
-        $date = new DateTime();
+        $form = $this->createForm(OrderType::class);
+
+        $form->handleRequest($request);
 
 
-        $order = new Order();
+        if ($form->isSubmitted() && $form->isValid()){
+            $userId = $user->getId();
 
-        $order->setUser($user);
-        $order->setState(0);
-        $order->setOrderNumber($orderId . "-" . $userId . "-" . $date->format("d-m-y"));
-        $manager->persist($order);
+            $requet = $this->orderRepository->findLastId();
 
-        foreach ($cart->getFull($pizzaRepository) as $pizza) {
-            $orderDetail = new OrderDetail();
-            $orderDetail->setMyOrder($order);
-            $orderDetail->setPizza($pizza["pizza"]->getName());
-            $orderDetail->setQuantity($pizza["quantity"]);
-            $orderDetail->setPrice($pizza["pizza"]->getPrice());
-            $orderDetail->setTotal($pizza["pizza"]->getPrice() * $pizza["quantity"]);
-            $manager->persist($orderDetail);
+            $orderId =  $requet[0]["id"]+1;
 
+            $date = new DateTime();
+
+
+            $order = new Order();
+
+            $order->setUser($user);
+            $order->setState(0);
+            $order->setOrderNumber($orderId . "-" . $userId . "-" . $date->format("d-m-y"));
+            $order->setWantedAt($form->getData()->getWantedAt());
+
+            $manager->persist($order);
+
+            foreach ($cart->getFull($pizzaRepository) as $pizza) {
+                $orderDetail = new OrderDetail();
+                $orderDetail->setMyOrder($order);
+                $orderDetail->setPizza($pizza["pizza"]->getName());
+                $orderDetail->setQuantity($pizza["quantity"]);
+                $orderDetail->setPrice($pizza["pizza"]->getPrice());
+                $orderDetail->setTotal($pizza["pizza"]->getPrice() * $pizza["quantity"]);
+                $manager->persist($orderDetail);
+
+            }
+            $manager->flush();
+            return $this->render("commande/add.html.twig", [
+                'cart' => $cart->getFull($pizzaRepository),
+                "orderNumber" => $order->getOrderNumber()
+
+            ]);
         }
-        $manager->flush();
-        return $this->render("commande/add.html.twig", [
+
+        return $this->render("commande/recap.html.twig", [
             'cart' => $cart->getFull($pizzaRepository),
-            "orderNumber" => $order->getOrderNumber()
+            "form"=>$form->createView()
 
         ]);
     }

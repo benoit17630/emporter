@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+Modifier l utilisateur
+{% endblock %}
+{% block body %}
+<div class="stencil">
+    <h1 class="text-center mt-5">Modifier le role d un Utilisateur</h1>
+{{ form(form) }}
+    <a href="{{ path('admin_user') }}">retour a la liste</a>
+</div>
+{% endblock %}
+
+
+
