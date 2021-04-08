@@ -2,24 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73ce0efb-6fce-4e23-8e27-47d0faa6f914" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210406120129.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210406145330.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/Admin/UserType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/user/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/user/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/commande/recap.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/pizza/calzone_606dca3c83810.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminOrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Order/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Order/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Admin/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Admin/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/OrderType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/OrderType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/order/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/order/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/pizza/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/pizza/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/search.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/search.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminOrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/Admin/PizzaType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Admin/PizzaType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/commande/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/commande/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,6 +141,9 @@
       <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
     </include_path>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1lh8Cib8HcKrmG87Dp0V0yHj6j0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -235,7 +226,7 @@
       <workItem from="1616762048686" duration="11000" />
       <workItem from="1616767803922" duration="1383000" />
       <workItem from="1617090945433" duration="87840000" />
-      <workItem from="1617693428143" duration="29987000" />
+      <workItem from="1617693428143" duration="33224000" />
     </task>
     <task id="LOCAL-00001" summary="transfer">
       <created>1610634748548</created>
@@ -293,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617698151882</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ajout du choix de l heure d une commande">
+      <created>1617794045731</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1617794045731</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,7 +316,8 @@
     <MESSAGE value="un ptit commit car sa fait longtemps" />
     <MESSAGE value="enregistrement de la commande en bdd" />
     <MESSAGE value="ajout du payment en ligne" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout du payment en ligne" />
+    <MESSAGE value="ajout du choix de l heure d une commande" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout du choix de l heure d une commande" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

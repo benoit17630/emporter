@@ -12,6 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\File;
 
 class PizzaType extends AbstractType
 {
@@ -29,11 +30,23 @@ class PizzaType extends AbstractType
             ->add('price',null,[
                 "label"=> "prix : "
             ])
-            ->add("image",FileType::class,[
-                "mapped"=> false,
-                "required"=> false,
-                
-            ])
+            ->add("image",FileType::class,
+                [
+                    "mapped"=> false,
+                    "required"=> false,
+                    "constraints"=>
+                        [//je definie les contrainte sur le type de fichier a recuperer
+                            new File([
+                                'maxSize'=>"5000k",
+                                "mimeTypes"=>[
+                                    "image/jpg",
+                                    "image/jpeg",
+                                    "image/gif",
+                                    "image/png"
+                                ]
+                            ])
+                        ]
+                ] )
 
             ->add('isActive', null,[
                 "label"=> "afficher ?"
